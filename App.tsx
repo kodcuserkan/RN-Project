@@ -2,12 +2,12 @@ import React, {FC} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import './src/constants/firebase'
+import MainNavigation from './src/navigation/mainNavigation'
 
 const App : FC = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <MainNavigation />
     </View>
   );
 }
