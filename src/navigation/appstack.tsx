@@ -6,7 +6,7 @@ const { Navigator, Screen } = createStackNavigator();
 
 const Appstack: FC = () => {
     return (
-        <Navigator>
+        <Navigator screenOptions={{headerShown: false}}>
             <Screen name="home" component={Home}></Screen>
             <Screen name="dashboard" component={Dashboard}></Screen>
         </Navigator>

@@ -1,10 +1,14 @@
 import React, { FC } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
+import Input from "../components/input";
+
+var {width, height} = Dimensions.get("screen");
 
 const Login: FC = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login Screen</Text>
+      <Input />
     </View>
   );
 };
@@ -14,6 +18,11 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
     backgroundColor: "#eaeaea",
+    alignSelf: "center",
+    justifyContent: "center",
+    width: width,
+    height: height
+
   },
   title: {
     marginTop: 16,
