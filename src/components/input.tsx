@@ -7,12 +7,19 @@ interface Props {
     onChangeText: (text: string) => void;
     placeholder: string;
     safeArea?: boolean;
+    capitalize?: any; 
 }
 
 const Input : FC<Props> = props => {
     return (
         <View style={styles.container}>
-            <TextInput style={styles.input} secureTextEntry={props.safeArea || false} placeholder={props.placeholder} onChangeText={props.onChangeText} />
+            <TextInput 
+                style={styles.input} 
+                secureTextEntry={props.safeArea || false} 
+                placeholder={props.placeholder} 
+                onChangeText={props.onChangeText} 
+                autoCapitalize={ props.capitalize || "none"}
+            />
         </View>
     )
 }
@@ -23,14 +30,19 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         backgroundColor: '#a3a3a3',
         textAlign: "center",
-        alignItems: "center"
+        alignItems: "center",
+        borderRadius: 8
     },
     input : {
         width: 0.9*width,
-        height: 35,
+        height: 45,
         backgroundColor: '#fff',
         borderColor: "#000",
-        borderRadius: 5
+        padding:5,
+        paddingLeft: 10,
+        paddingRight: 10,
+        borderRadius: 5,
+        fontSize: 23
     }
 })
 
